@@ -21,7 +21,9 @@ use App\Http\Controllers\ServiceController;
 
 Route::post('/student/register', [AuthController::class, 'StudentRegister']);
 Route::post('/teacher/register', [AuthController::class, 'TeacherRegister']);
-Route::post('/user/login', [AuthController::class, 'UserLogin']);
+Route::post('/teacher/login', [AuthController::class, 'TeacherUserLogin']);
+Route::post('/student/login', [AuthController::class, 'StudentUserLogin']);
+Route::post('/admin/login', [AuthController::class, 'AdminUserLogin']);
 Route::post('/teacher/assignment', [ServiceController::class, 'assignTeacher']);
 Route::put('/user/profile/approval', [ServiceController::class, 'approveProfile']);
 
